@@ -189,7 +189,7 @@ if ($_POST['email']) {
 */
 // Отправка письма администратору
 
-mail('f.glukhov@gmail.com', $_POST['subject'], $body, $headers);
+mail('dmitriikazackii@gmail.com', $_POST['subject'], $body, $headers);
 
 //echo $body;
 
