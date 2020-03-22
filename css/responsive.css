@@ -41,7 +41,17 @@
     left: 50%;
     top: -20px;
     width: 380px;
-    margin-left: -190px; } }
+    margin-left: -190px; }
+  .samlpe-item-pic {
+    padding: 50px 70px 50px 70px; }
+  .sample-item-descr {
+    padding: 46px 40px 38px 40px; }
+  .sample-item-comment-author {
+    margin-right: 20px; }
+  .reviews-video-slider-wrapper:after {
+    right: -50px; }
+  .section-reviews-descr {
+    margin-left: 0; } }
 
 @media (max-width: 991px) {
   h1, .h1 {
@@ -128,7 +138,20 @@
     text-align: center;
     width: auto; }
   .bankrupt-pic img {
-    width: 300px; } }
+    width: 300px; }
+  .sample-item {
+    flex-wrap: wrap; }
+  .samlpe-item-pic {
+    order: 2;
+    flex-basis: 100%; }
+  .sample-item-descr {
+    order: 1;
+    flex-basis: 100%; }
+  .reviews-video-slider-wrapper:after {
+    display: none; }
+  .section-reviews-descr {
+    margin-left: 0;
+    padding-left: 0; } }
 
 @media (max-width: 767px) {
   body,
@@ -426,7 +449,7 @@
   .order-content {
     padding: 55px 30px 30px 30px; }
   .order-ttl {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px; }
   .order-text {
     padding: 0;
@@ -470,4 +493,97 @@
     font-size: 14px;
     line-height: 24px; }
   .modal-descr .hr {
-    margin: 20px 0 20px 0; } }
+    margin: 20px 0 20px 0; }
+  .sample-item {
+    margin: 0 -15px; }
+  .sample-item-descr {
+    padding: 25px 15px 25px 15px; }
+  .sample-item-descr h3, .sample-item-descr .h3 {
+    font-size: 24px;
+    line-height: 28px; }
+  .sample-item-sub-ttl {
+    font-size: 13px;
+    line-height: 20px; }
+  .sample-item-info {
+    padding: 15px 0 0 0;
+    margin: 15px 0 0 0; }
+  .sample-item-comment {
+    flex-wrap: wrap;
+    margin-top: 25px; }
+  .sample-item-comment-author {
+    flex-basis: 50%;
+    margin: 0 auto 20px auto; }
+  .samlpe-item-pic {
+    padding: 30px 50px 30px 50px; }
+  .sample-item-gallery .slick-prev {
+    left: -40px; }
+  .sample-item-gallery .slick-next {
+    right: -40px; }
+  .section-reviews .section-header h2,
+  .section-reviews .section-header .h2 {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center; }
+  .section-reviews .section-content {
+    padding: 40px 0 40px 0; }
+  .reviews-slider-wrapper {
+    margin: 30px 50px 25px 50px;
+    border: none;
+    padding: 0; }
+  .reviews-item {
+    padding: 0;
+    text-align: center; }
+  .reviews-slider .slick-arrow {
+    top: 20px; }
+  .reviews-slider .slick-prev {
+    left: -45px; }
+  .reviews-slider .slick-next {
+    right: -45px;
+    left: auto; }
+  .play-button {
+    width: 50px;
+    height: 55px;
+    margin: -27px 0 0 -25px; }
+  .play-button svg {
+    width: 50px;
+    height: 55px; }
+  .section-faq .section-content {
+    padding: 40px 0 40px 0; }
+  .faq-item-ttl {
+    padding: 0 0 0 30px;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    line-height: 24px; }
+  .faq-item-ttl:before {
+    font-size: 16px;
+    line-height: 24px;
+    top: 0; }
+  .btn-collapse,
+  .btn-collapse:focus {
+    right: 20px;
+    top: 20px; }
+  .faq-item-content {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .faq-item-content-inner {
+    padding: 10px 40px 20px 10px; }
+  .section-collectors .section-content {
+    padding-top: 60px;
+    padding-bottom: 40px; }
+  .order-wrapper-alt .order-text {
+    padding: 0;
+    font-size: 22px;
+    line-height: 26px; }
+  .order-wrapper-alt .order-button .btn-2, .order-wrapper-alt .order-button .btn-2:focus {
+    min-width: 0px;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: normal; }
+  .order-wrapper-alt .order-button {
+    margin-top: 25px; }
+  .order-wrapper-alt .order-content {
+    padding-bottom: 30px; }
+  .section-order .section-content {
+    padding-top: 60px; } }

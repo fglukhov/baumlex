@@ -79,6 +79,77 @@ var baseUrl = "";
 
 $(document).ready(function () {
 
+	// Reviews slider
+
+	$(".reviews-video-slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		rows: 0,
+		speed: 500,
+		arrows: false,
+		swipe: false
+	});
+
+	$(".reviews-slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		rows: 0,
+		speed: 500,
+		asNavFor: ".reviews-video-slider"
+	});
+
+	// Reviews slider END
+
+	// sample modal
+
+	$("[data-target='#sampleModal']").click(function () {
+
+		var link = $(this),
+			linkUrl = $(this).attr("href");
+
+		$("#sampleModal").addClass("loading");
+
+		$.ajax({
+			url: linkUrl,
+			dataType: "html"
+		}).done(function(data) {
+
+			$("#sampleModal").removeClass("loading");
+			$("#sampleModal .modal-content-inner").html($(data));
+
+			$("#sampleModal .sample-item-gallery").slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				dots: false,
+				rows: 0
+			});
+
+		});
+
+
+	});
+
+	$('.modal').on('hidden.bs.modal', function () {
+
+		if ($(".modal").hasClass("show")) {
+
+			$("body").addClass("modal-open");
+
+		}
+
+	});
+
+	$('#sampleModal').on('shown.bs.modal', function () {
+
+		$("#sampleModal .sample-item-gallery").slick("setPosition");
+
+	});
+
+	// sample modal END
+
 	// NEW
 
 
@@ -586,32 +657,6 @@ $(document).ready(function () {
 
 	// Cases slider END
 
-	// Reviews slider
-
-	$(".reviews-slider").slick({
-		slidesToShow: 3,
-		slidesToScroll: 3,
-		infinite: false,
-		speed: 750,
-		arrows: true,
-		dots: true,
-		swipe: true,
-		rows: 0,
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					adaptiveHeight: true,
-					swipe: true
-				}
-			}
-		]
-	});
-
-	// Reviews slider END
-
 	// Cert slider
 
 	$(".cert-tmb").click(function () {
@@ -669,6 +714,27 @@ $(document).ready(function () {
 					type: "Нижняя форма, скидка 10%",
 					name: $("#order_name").val(),
 					phone: $("#order_phone").val()
+				}
+			}).done(function() {
+
+				formSuccess(form);
+
+			});
+			return false;
+		}
+	});
+
+	$("#collectorsForm").submit(function() {
+		if ($(this).valid()) {
+			var form = $(this);
+			$.ajax({
+				type: "POST",
+				url: baseUrl + "order.php",
+				data: {
+					subject: "Баум-Lex - Заявка на защиту от коллекторов",
+					type: "Нижняя форма, скидка 10%",
+					name: $("#collectors_name").val(),
+					phone: $("#collectors_phone").val()
 				}
 			}).done(function() {
 
@@ -1668,9 +1734,6 @@ function quiz() {
 
 		}
 
-
-
-
 	});
 
 	$(".poll-form input[type=checkbox], .poll-form input[type=radio]").change(function () {
@@ -1686,6 +1749,12 @@ function quiz() {
 			}
 
 		}
+
+	});
+
+	$(".poll-form .form-radio-text input[type=text]").on("change input", function () {
+
+		$(this).closest(".form-radio-text").find(".form-radio input").prop("checked", true).change();
 
 	});
 
