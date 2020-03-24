@@ -205,18 +205,19 @@ main ul {
   list-style: none; }
 
 main ul > li {
-  padding: 0 0 0 35px;
+  padding: 0 0 0 20px;
   margin: 0 0 10px 0;
   position: relative; }
 
 main ul > li:before {
   content: "";
-  width: 21px;
-  height: 21px;
-  background: url(../images/li-bullet.svg) 0 0 no-repeat;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #AC966D;
   position: absolute;
   left: 0;
-  top: 2px; }
+  top: 9px; }
 
 main ol {
   padding: 0;
@@ -1092,7 +1093,7 @@ ul.navbar-nav a.active {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #AC966D;
-  max-width: 250px;
+  max-width: 270px;
   padding: 24px 0 0 0; }
 
 .header-logo {
@@ -1281,7 +1282,9 @@ ul.calc-list > li:before {
   color: #AC966D; }
 
 .section-ceo .section-header {
-  margin: 0 0 27px 0; }
+  margin: 0 0 27px 0;
+  position: relative;
+  z-index: 20; }
 
 .section-ceo .section-sub-ttl {
   margin-top: 0;
@@ -1297,16 +1300,20 @@ ul.calc-list > li:before {
   flex-grow: 0;
   flex-shrink: 0;
   padding-left: 47px;
-  padding-top: 46px; }
+  padding-top: 46px;
+  position: relative;
+  z-index: 2; }
 
 .ceo-r {
   flex-basis: 33.333%;
   flex-grow: 0;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  z-index: 2; }
 
 .ceo-m {
   flex-grow: 1;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
 
 .ceo-pic {
   position: absolute;
@@ -1697,6 +1704,11 @@ ul.calc-list > li:before {
   flex-direction: column;
   justify-content: space-between; }
 
+.sample-tmb-descr .num {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 4px 0 0 0; }
+
 .sample-tmb-button {
   margin: 11px 0 0 0; }
 
@@ -1761,8 +1773,8 @@ ul.calc-list > li:before {
 .price-tmb .h3 {
   font-family: 'OldStandard';
   font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 32px;
+  line-height: 36px;
   text-align: center;
   color: #273057;
   margin: 0 0 17px 0; }
@@ -1795,6 +1807,14 @@ ul.calc-list > li:before {
   color: #A68D5F;
   border-top: 1px solid #AC966D;
   padding: 13px 0 11px 0; }
+
+.price-tmb-price span {
+  text-transform: none;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  letter-spacing: .05em;
+  margin: 0 0 5px 0; }
 
 .price-tmb-button .btn {
   width: 100%; }
