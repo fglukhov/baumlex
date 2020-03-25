@@ -1874,6 +1874,9 @@ ul.poll-dots > li.active {
   color: #AC966D;
   border-color: #AC966D; }
 
+ul.poll-dots > li:before {
+  display: none; }
+
 .poll-form {
   max-width: 410px; }
 
